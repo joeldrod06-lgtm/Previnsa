@@ -14,11 +14,12 @@ export function HeroSection() {
         src={heroImage}
         alt=""
         aria-hidden="true"
-        className="hero-float absolute inset-y-0 right-[-56%] h-full w-[180%] max-w-none object-cover object-[58%_center] opacity-64 sm:right-[-44%] md:right-[-28%] md:w-[132%] lg:right-0 lg:w-[70%]"
+        className="hero-float absolute inset-y-0 right-[-56%] h-full w-[180%] max-w-none object-cover object-[58%_center] opacity-64 sm:right-[-44%] md:right-[-28%] md:w-[132%] lg:right-0 lg:w-[70%] lg:object-[40%_center] lg:[--hero-zoom:1.14] xl:object-[36%_center] xl:[--hero-zoom:1.2]"
       />
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,20,38,0.99)_0%,rgba(7,30,56,0.94)_42%,rgba(7,30,56,0.72)_68%,rgba(7,30,56,0.42)_100%)]" />
-      <div className="absolute inset-0 bg-slate-950/30" />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,20,38,0.99)_0%,rgba(7,30,56,0.94)_42%,rgba(7,30,56,0.66)_68%,rgba(7,30,56,0.22)_100%)]" />
+      <div className="absolute inset-0 bg-slate-950/20" />
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.07)_0%,transparent_20%,rgba(0,0,0,0.22)_100%)]" />
+      <div className="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-b from-transparent to-slate-950" />
 
       <div className="absolute inset-x-0 top-0 z-40 border-b border-white/10 bg-slate-950/60 backdrop-blur-2xl">
         <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">

@@ -53,11 +53,11 @@ body {
 @keyframes soft-float {
   0%,
   100% {
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0) scale(var(--hero-zoom, 1));
   }
 
   50% {
-    transform: translate3d(0, -8px, 0);
+    transform: translate3d(0, -8px, 0) scale(var(--hero-zoom, 1));
   }
 }
 
@@ -93,6 +93,8 @@ body {
 
 .hero-float {
   animation: soft-float 14s ease-in-out infinite;
+  transform: scale(var(--hero-zoom, 1));
+  transform-origin: 44% center;
   will-change: transform;
 }
 
@@ -119,11 +121,15 @@ body {
   }
 
   .reveal-up,
-  .hero-float,
   .cta-pulse {
     opacity: 1;
     transform: none;
     animation: none;
+  }
+
+  .hero-float {
+    animation: none;
+    transform: scale(var(--hero-zoom, 1));
   }
 
   .interactive-card,
