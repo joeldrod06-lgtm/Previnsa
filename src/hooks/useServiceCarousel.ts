@@ -45,6 +45,28 @@ export function useServiceCarousel(itemCount: number) {
     setActiveIndex((current) => Math.min(current, maxIndex));
   }, [maxIndex]);
 
+  useEffect(() => {
+    const viewport = servicesViewportRef.current;
+    if (!viewport) return;
+
+    const handleScroll = () => {
+      const card = viewport.querySelector<HTMLElement>("[data-service-card]");
+      if (!card) return;
+
+      const step = card.offsetWidth + getCarouselGap(viewport);
+      if (!step) return;
+
+      const nextIndex = Math.round(viewport.scrollLeft / step);
+      setActiveIndex(Math.max(0, Math.min(nextIndex, maxIndex)));
+    };
+
+    viewport.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      viewport.removeEventListener("scroll", handleScroll);
+    };
+  }, [maxIndex]);
+
   const scrollTo = useCallback(
     (index: number) => {
       const clamped = Math.max(0, Math.min(index, maxIndex));

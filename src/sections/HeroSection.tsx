@@ -39,7 +39,7 @@ export function HeroSection() {
             </nav>
             <a
               href="#contacto"
-              className="inline-flex items-center justify-center rounded-full bg-brand-500 px-4 py-2.5 text-[13px] font-semibold text-white shadow-[0_18px_48px_rgba(0,0,0,0.22)] transition hover:-translate-y-0.5 hover:bg-brand-400 sm:px-5"
+              className="inline-flex shrink-0 items-center justify-center text-center rounded-full bg-brand-500 px-4 py-2.5 text-[13px] font-semibold text-white shadow-[0_18px_48px_rgba(0,0,0,0.22)] transition hover:-translate-y-0.5 hover:bg-brand-400 sm:px-5"
             >
               Solicitar cotización
             </a>

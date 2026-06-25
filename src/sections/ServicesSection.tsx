@@ -59,8 +59,11 @@ export function ServicesSection() {
 
           <div
             ref={servicesViewportRef}
-            className="flex snap-x snap-mandatory gap-5 overflow-x-hidden scroll-smooth pb-3"
-            style={{ scrollbarWidth: "none" }}
+            className="flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth pb-3 md:overflow-x-hidden"
+            style={{
+              scrollbarWidth: "none",
+              WebkitOverflowScrolling: "touch",
+            }}
           >
             {serviceProducts.map((product, index) => (
               <article
